@@ -1,26 +1,20 @@
-
-
-
 import 'package:flutter/material.dart';
-import 'package:flutter_batch_3/screen/checkbox_widget.dart';
-import 'package:flutter_batch_3/screen/chip.dart';
-import 'package:flutter_batch_3/screen/grid_view.dart';
-import 'package:flutter_batch_3/screen/home.dart';
-import 'package:flutter_batch_3/screen/stack.dart';
+import 'my_screen/first_screen.dart';
 
-void main(){
-  runApp(MyApp());
+void main() {
+  runApp(MaterialScreen());
 }
 
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MaterialScreen extends StatelessWidget {
+  const MaterialScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CheckboxWidget(),
+      home: FirstScreen(),
     );
   }
 }
+
+

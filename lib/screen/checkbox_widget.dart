@@ -8,7 +8,6 @@ class CheckboxWidget extends StatefulWidget {
 }
 
 class _CheckboxWidgetState extends State<CheckboxWidget> {
-  // bool status = false;
   bool status = false;
 
   @override
