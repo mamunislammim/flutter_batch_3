@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_batch_3/screen/my_text_field.dart';
 import 'my_screen/first_screen.dart';
 
 void main() {
@@ -12,7 +13,10 @@ class MaterialScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FirstScreen(),
+      home: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: MyTextFieldWidget(),
+      ),
     );
   }
 }
