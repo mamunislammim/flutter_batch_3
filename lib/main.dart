@@ -1,8 +1,12 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_batch_3/screen/my_text_field.dart';
-import 'my_screen/first_screen.dart';
+
+import 'my_screen/gpa_calculator.dart';
 
 void main() {
+  log("======================Main Screen");
   runApp(MaterialScreen());
 }
 
@@ -13,10 +17,7 @@ class MaterialScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: MyTextFieldWidget(),
-      ),
+      home: MyCGPACalculator(),
     );
   }
 }
