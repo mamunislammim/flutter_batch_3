@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
+import 'package:flutter_batch_3/my_screen/gpa_calculator.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -13,6 +14,8 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController passwordController = TextEditingController();
   final myKey = GlobalKey<FormState>();
   bool isDisable = true;
+
+  List<String> studentList = ["Rabby", "Assadullah", "Sidat", "Liton"];
 
   @override
   Widget build(BuildContext context) {
@@ -102,24 +105,52 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 InkWell(
                   onTap: () {
-                    log("=========11111111==========");
-                    if (!myKey.currentState!.validate()) {
-                      log("===========55555555=======");
-                      return;
+                    // log("=========11111111==========");
+                    // if (!myKey.currentState!.validate()) {
+                    //   log("===========55555555=======");
+                    //   return;
+                    // }
+
+                    var count = 500;
+
+                    for (var studentName in studentList) {
+                      if (studentName == mailController.text) {
+                        count = 1000;
+                          ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                  backgroundColor: Colors.green,
+                                  content: Text("Login Successful")));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> MyCGPACalculator()));
+                        break;
+                      }
                     }
 
-                    if(mailController.text == "a@gmail.com" && passwordController.text == "Ma@123456"){
-                      log("=======Login Successful");
-                      ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                              backgroundColor: Colors.green,
-                              content: Text("Login Successful")));
-                    }else{
-                      log("========Wrong user");
+                    if (count == 500) {
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                           backgroundColor: Colors.red,
                           content: Text("Wrong user. Please try again.")));
                     }
+
+                    //
+                    // if(studentList.contains(mailController.text)){
+                    //   log("=============Success");
+                    // } else{
+                    //   log("============Not Found");
+                    // }
+
+                    // if(mailController.text == ){
+                    //   log("=======Login Successful");
+                    //
+                    //   ScaffoldMessenger.of(context).showSnackBar(
+                    //       SnackBar(
+                    //           backgroundColor: Colors.green,
+                    //           content: Text("Login Successful")));
+                    // }else{
+                    //   log("========Wrong user");
+                    //   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    //       backgroundColor: Colors.red,
+                    //       content: Text("Wrong user. Please try again.")));
+                    // }
                   },
                   child: Card(
                     color: Colors.pinkAccent,
