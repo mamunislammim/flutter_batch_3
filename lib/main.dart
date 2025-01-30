@@ -5,6 +5,7 @@ import 'package:flutter_batch_3/screen/my_text_field.dart';
 
 import 'login/login.dart';
 import 'my_screen/gpa_calculator.dart';
+import 'note_app/note_screen.dart';
 
 void main() {
   log("======================Main Screen");
@@ -18,9 +19,8 @@ class MaterialScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      theme: ThemeData.dark(),
+      home: NoteScreen(),
     );
   }
 }
-
-
