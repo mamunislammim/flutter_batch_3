@@ -1,5 +1,8 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
+import 'package:flutter_batch_3/local_database/local_data.dart';
+
+import '../login/login.dart';
 
 class MyCGPACalculator extends StatefulWidget {
   const MyCGPACalculator({super.key});
@@ -165,7 +168,16 @@ class _MyCGPACalculatorState extends State<MyCGPACalculator> {
                        ( double.parse(controller8.text) * 0.15); // 15
                     setState(() {});
                   },
-                  child: Text("Add"))
+                  child: Text("Add")),
+
+              SizedBox(height: 20),
+              ElevatedButton(
+                  onPressed: () {
+                     AppLocalData().dataAllDeleteFun();
+                     Navigator.pushReplacement(
+                         context, MaterialPageRoute(builder: (c) => LoginScreen()));
+                     },
+                  child: Text("Log Out"))
             ],
           ),
         ),

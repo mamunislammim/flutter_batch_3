@@ -9,12 +9,19 @@ List<Map<String, dynamic>> noteList = [
   {"created_at": DateTime.now(), "note": "_"}
 ];
 
+List<Map<String, dynamic>> favList = [
+  {"created_at": DateTime.now(), "note": "_"}
+];
+
 class NoteScreen extends StatefulWidget {
   const NoteScreen({super.key});
 
   @override
   State<NoteScreen> createState() => _NoteScreenState();
 }
+
+
+// CRUD = > Create, Read, Update. Delete
 
 class _NoteScreenState extends State<NoteScreen> {
   @override

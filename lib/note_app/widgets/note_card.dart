@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_batch_3/note_app/note_edit.dart';
 
 class NoteCardWidget extends StatelessWidget {
   const NoteCardWidget({
     super.key,
-     this.i, required this.data,
+    this.i,
+    required this.data,
   });
 
   final int? i;
- final  Map<String,dynamic> data ;
+  final Map<String, dynamic> data;
 
   @override
   Widget build(BuildContext context) {
@@ -39,10 +41,33 @@ class NoteCardWidget extends StatelessWidget {
               ),
             ),
             Spacer(),
-            CircleAvatar(
-              backgroundColor: Colors.grey,
-              radius: 15,
-              child: Text("$i"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  radius: 15,
+                  child: Text("$i"),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => NoteEditScreen(
+                          createdAt: data['created_at'],
+                          note: data['note'],
+                          index: i ?? 0,
+                        ),
+                      ),
+                    );
+                  },
+                  child: Icon(
+                    Icons.edit,
+                    color: Colors.red,
+                  ),
+                ),
+              ],
             )
           ],
         ),
