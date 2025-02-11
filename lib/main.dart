@@ -1,30 +1,22 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_batch_3/screen/my_text_field.dart';
-import 'package:flutter_batch_3/splash_screen.dart';
+import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 
-import 'data_passing/first_screen.dart';
-import 'local_test.dart';
-import 'login/login.dart';
-import 'my_screen/gpa_calculator.dart';
-import 'note_app/note_screen.dart';
-import 'note_popup/import.dart';
+import 'model_topics/student_screen.dart';
+import 'model_topics/ui.dart';
 
 void main() {
-  log("======================Main Screen");
-  runApp(MaterialScreen());
+  runApp(MyApp());
 }
 
-class MaterialScreen extends StatelessWidget {
-  const MaterialScreen({super.key});
+
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      //  theme: ThemeData.dark(),
-      home: SplashScreen(),
+      home: StudentScreen(),
     );
   }
 }

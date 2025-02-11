@@ -1,6 +1,6 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
-import 'package:flutter_batch_3/local_database/local_data.dart';
+import 'package:flutter_batch_3/local_database/secure_storage.dart';
 import 'package:flutter_batch_3/my_screen/gpa_calculator.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -106,7 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
                 InkWell(
-                  onTap: () async{
+                  onTap: () async {
                     // log("=========11111111==========");
                     if (!myKey.currentState!.validate()) {
                       log("===========55555555=======");
@@ -122,7 +122,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             backgroundColor: Colors.green,
                             content: Text("Login Successful")));
 
-                      await AppLocalData().dataInsertFun(key: "login", value: "yes");
+                        await AppLocalData()
+                            .dataInsertFun(key: "login", value: "yes");
 
                         Navigator.pushReplacement(
                             context,
