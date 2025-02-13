@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     await Future.delayed(const Duration(seconds: 2));
     var savedData = await AppLocalData().dataGetFun(key: "login");
 
-    log("==========22222222======${savedData}");
+    log("==========22222222======\${savedData}");
 
     if (savedData == "yes") {
       Navigator.pushReplacement(

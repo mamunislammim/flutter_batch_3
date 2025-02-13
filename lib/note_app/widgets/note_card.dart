@@ -24,14 +24,14 @@ class NoteCardWidget extends StatelessWidget {
           children: [
             Center(
               child: Text(
-                "${data['created_at'].toString().substring(0, 16)}",
+                "\${data['created_at'].toString().substring(0, 16)}",
                 style: TextStyle(color: Colors.grey),
               ),
             ),
             SizedBox(height: 10),
             Center(
               child: Text(
-                "${data['note']}",
+                "\${data['note']}",
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 16,
@@ -47,7 +47,7 @@ class NoteCardWidget extends StatelessWidget {
                 CircleAvatar(
                   backgroundColor: Colors.grey,
                   radius: 15,
-                  child: Text("$i"),
+                  child: Text("\$i"),
                 ),
                 InkWell(
                   onTap: () {

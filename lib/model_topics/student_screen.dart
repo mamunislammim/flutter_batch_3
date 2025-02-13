@@ -16,7 +16,7 @@ class _StudentScreenState extends State<StudentScreen> {
   fetchData() async {
     var data = await DataConverter().converterFun();
     studentList = data;
-    log("===========aaa  :${data[0].name}================");
+    log("===========aaa  :\${data[0].name}================");
     setState(() {});
   }
 
@@ -38,7 +38,7 @@ class _StudentScreenState extends State<StudentScreen> {
               onPressed: () async {
                 var data = await DataConverter().converterFun();
                 studentList = data;
-                log("===========aaa  :${data[0].name}================");
+                log("===========aaa  :\${data[0].name}================");
                 setState(() {});
               },
               icon: const Icon(Icons.refresh))
@@ -54,17 +54,17 @@ class _StudentScreenState extends State<StudentScreen> {
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   child: Row(
                     children: [
-                      Text("${studentList[index].id}"),
+                      Text("\${studentList[index].id}"),
                       const SizedBox(width: 20),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("${studentList[index].name}"),
-                          Text("${studentList[index].dep}"),
+                          Text("\${studentList[index].name}"),
+                          Text("\${studentList[index].dep}"),
                         ],
                       ),
                       const Spacer(),
-                      Text("${studentList[index].sec}"),
+                      Text("\${studentList[index].sec}"),
                     ],
                   ),
                 ),

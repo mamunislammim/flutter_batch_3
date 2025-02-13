@@ -39,7 +39,7 @@ class _MyCGPACalculatorState extends State<MyCGPACalculator> {
           child: Column(
             children: [
               SizedBox(height: 50),
-              Text("======CGPA  : ${cgpa.toStringAsFixed(2)}"),
+              Text("======CGPA  : \${cgpa.toStringAsFixed(2)}"),
               SizedBox(
                 height: 50,
               ),

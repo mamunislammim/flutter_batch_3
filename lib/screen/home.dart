@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: ListView.builder(
         itemCount: studentInfo.length,
         itemBuilder: (context, a) {
-          log("============= i : $a =======================");
+          log("============= i : \$a =======================");
           return ContactWidget(name: studentInfo[a]['name'], phone: studentInfo[a]['id']);
         },
       ),

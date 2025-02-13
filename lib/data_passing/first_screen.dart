@@ -18,7 +18,7 @@ class _FirstDataScreenState extends State<FirstDataScreen> {
       appBar: AppBar(
         backgroundColor: Colors.green,
         centerTitle: true,
-        title: Text("First Screen  :${nameController.text}", style: TextStyle(color: Colors.white)),
+        title: Text("First Screen  :\${nameController.text}", style: TextStyle(color: Colors.white)),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),

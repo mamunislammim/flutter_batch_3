@@ -66,7 +66,7 @@ class _GridViewWidgetState extends State<GridViewWidget> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Image.network(
-                          "${productList[a]['img']}",
+                          "\${productList[a]['img']}",
                           height: 150,
                           width: 200,
                           fit: BoxFit.fill,
@@ -77,12 +77,12 @@ class _GridViewWidgetState extends State<GridViewWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "${productList[a]['product_name']}",
+                                "\${productList[a]['product_name']}",
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                               ),
                               Text(
-                                "Discounted Price ${productList[a]['sale_price']} \$",
+                                "Discounted Price \${productList[a]['sale_price']} ",
                               ),
                               Row(
                                 children: [
@@ -90,7 +90,7 @@ class _GridViewWidgetState extends State<GridViewWidget> {
                                     "Regular Price : ",
                                   ),
                                   Text(
-                                    "${productList[a]['regular_price']}",
+                                    "\${productList[a]['regular_price']}",
                                     style: TextStyle(
                                         decoration: TextDecoration.lineThrough),
                                   ),

@@ -28,10 +28,10 @@ class _CheckboxWidgetState extends State<CheckboxWidget> {
               //fillColor: WidgetStatePropertyAll(Colors.blue),
               value: status,
               onChanged: (value) {
-                print("===============${status}==============");
+                print("===============\${status}==============");
                 status = value!;
                 setState(() {});
-                print("================$status=============");
+                print("================\$status=============");
               },
             ),
             Text("Is Voter")

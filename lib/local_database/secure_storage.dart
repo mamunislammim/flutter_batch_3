@@ -13,7 +13,7 @@ class AppLocalData {
 
   dataGetFun({required String key}) async {
     String? value = await a.read(key: key);
-    log("=====Result : ===$value===================");
+    log("=====Result : ===\$value===================");
     return value;
   }
 

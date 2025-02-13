@@ -12,7 +12,7 @@ class DataConverter {
       StudentModel1 model = StudentModel1.fromJson(i);
       myList.add(model);
     }
-    log("======${myList.length}===========");
+    log("======\${myList.length}===========");
     return myList;
   }
 }

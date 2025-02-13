@@ -32,7 +32,7 @@ class _LocalTestScreenState extends State<LocalTestScreen> {
       ),
       body: Center(
         child: Text(
-          "Page ${selectedIndex + 1}",
+          "Page \${selectedIndex + 1}",
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
       ),

@@ -28,11 +28,11 @@ class _FirstDataScreenState extends State<SecondDataScreen> {
         child: Center(
           child: Column(
             children: [
-              Text("${widget.id}"),
-              Text("${widget.name}"),
-              Text("${widget.phone}"),
-              Text("${widget.cgpa ?? ""}"),
-              Text("${widget.section ?? ""}"),
+              Text("\${widget.id}"),
+              Text("\${widget.name}"),
+              Text("\${widget.phone}"),
+              Text("\${widget.cgpa ?? ""}"),
+              Text("\${widget.section ?? ""}"),
              ],
           ),
         ),

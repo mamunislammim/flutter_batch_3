@@ -25,7 +25,7 @@ class _MyTextFieldWidgetState extends State<MyTextFieldWidget> {
               child: TextField(
                 controller: nameController,
                 onChanged: (value) {
-                  log("=========$value============");
+                  log("=========\$value============");
                 },
                 cursorColor: Colors.red,
                 cursorHeight: 10,
@@ -49,7 +49,7 @@ class _MyTextFieldWidgetState extends State<MyTextFieldWidget> {
             ),
             ElevatedButton(
               onPressed: () {
-                log("====================Button : ${nameController.text}");
+                log("====================Button : \${nameController.text}");
               },
               child: Text("Log In"),
             ),

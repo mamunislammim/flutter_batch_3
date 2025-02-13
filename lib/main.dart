@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 
+import 'class_22/view/ui/product_screen/product_screen.dart';
 import 'model_topics/student_screen.dart';
 import 'model_topics/ui.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: StudentScreen(),
+      home: HomeScreen(),
     );
   }
 }

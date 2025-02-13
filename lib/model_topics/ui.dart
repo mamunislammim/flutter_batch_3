@@ -57,17 +57,17 @@ class _ModelTopicsScreenState extends State<ModelTopicsScreen> {
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   child: Row(
                     children: [
-                      Text("${studentInfo1[index].id}"),
+                      Text("\${studentInfo1[index].id}"),
                       const SizedBox(width: 20),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("${model1[index].name}"),
-                          Text("${model1[index].dep}"),
+                          Text("\${model1[index].name}"),
+                          Text("\${model1[index].dep}"),
                         ],
                       ),
                       const Spacer(),
-                      Text("${model1[index].sec}"),
+                      Text("\${model1[index].sec}"),
                     ],
                   ),
                 ),

@@ -57,7 +57,7 @@ class _NoteAddScreenState extends State<NoteAddScreen> {
                   // if (_myKey.currentState!.validate()) {
                   //   return;
                   // }
-                  log("====wwwwww=====${noteList.length}============");
+                  log("====wwwwww=====\${noteList.length}============");
                   Map<String,dynamic> noteData = {
                     "created_at" : DateTime.now(),
                     "note" : noteController.text
@@ -66,7 +66,7 @@ class _NoteAddScreenState extends State<NoteAddScreen> {
                    noteList.add(noteData);
                    //Navigator.pop(context);
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>  NoteScreen()));
-                  log("=====eeee====${noteList.length}============");
+                  log("=====eeee====\${noteList.length}============");
                 },
                 child: Card(
                   color: Color(0xff272727),

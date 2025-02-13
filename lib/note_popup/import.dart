@@ -34,13 +34,13 @@ class _NoteScreenWithPopUpState extends State<NoteScreenWithPopUp> {
           return ListTile(
             leading: CircleAvatar(
               radius: 25,
-              child: Text("${index + 1}"),
+              child: Text("\${index + 1}"),
             ),
-            title: Text("${studentList[index]['name']}"),
-            subtitle: Text("${studentList[index]['phone'] ?? "Empty"}"),
+            title: Text("\${studentList[index]['name']}"),
+            subtitle: Text("\${studentList[index]['phone'] ?? ""}"),
             trailing: InkWell(
                 onTap: (){
-                  log("============${index}===");
+                  log("============\${index}===");
                   studentList.removeAt(index);
                   setState(() {});
                 },
